@@ -43,10 +43,26 @@ OPERATIONS:
 3. TCL-
 
 
-git hub:
+GIT CONFIGURATION: 
 
 git config --global user.name "SheikAmeeth"
 git config --global user.email "sheikameethcse@gmail.com"
+
+GIT COMMANDS:
+
+git init
+
+git status
+
+git add . 
+
+git status
+
+git commit -m"sql"
+
+git remote and origin "https://github.com/SheikAmeeth/Sample.git"
+
+git push origin master
 
 
 
