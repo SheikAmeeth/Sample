@@ -60,7 +60,7 @@ git status
 
 git commit -m"sql"
 
-git remote and origin "https://github.com/SheikAmeeth/Sample.git"
+git remote add origin "https://github.com/SheikAmeeth/Sample.git"
 
 git push origin master
 
