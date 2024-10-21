@@ -1,0 +1,36 @@
+create database testnew;
+show databases;
+use testnew;
+create table hospital_details(Employee_no int primary key,Name varchar(30),Age int,sex varchar(10),Designation varchar(20),Salary int,Address varchar(100));
+select * from hospital_details;
+
+insert into hospital_details values(201,'Abdul Kalam',60,'Male','Chairman',150000,'Chennai');
+insert into hospital_details values(202,'Ajith',30,'Male','Cheif Doctor',100000,'Chennai');
+insert into hospital_details values(203,'Arul',28,'Male','Doctor',80000,'Coimbatore');
+insert into hospital_details values(204,'Khalid',28,'Male','Head Nurse',50000,'Chennai');
+insert into hospital_details values(205,'Suriya',25,'Male','Admin',40000,'Chennai');
+insert into hospital_details values(206,'Kala',25,'Female','Nurse',20000,'Chennai');
+insert into hospital_details values(207,'Gokila',25,'Female','Nurse',20000,'Chennai');
+insert into hospital_details values(208,'Bhavani',48,'Female','Housekeeping',10000,'Chennai');
+update hospital_details set Salary,concat('RS.',Salary);
+set sql_safe_updates=0;
+alter  table hospital_details add column joindate date;
+update hospital_details set joindate="2024-10-07";
+select now();
+select curdate();
+select date_format(curdate(),"%d/%m/%Y");
+select date_format(curdate(),"%d/%m/%y");
+select datediff(curdate(),"2025/10/07");
+select datediff(curdate(),"2025/10/10") AS COUNTDAYS;
+select datediff(curdate(),"2025/09/20") AS countdays;
+select date_add(curdate(),interval 2 year) as 'Two days after';
+select salary,concat('RS.',salary) from hospital_details;
+select salary,concat('Rs',format(salary,0)) from hospital_details;
+select * from hospital_details;
+update hospital_details set joindate='2024-01-01' where Employee_no='201'
+alter table hospital_details add Salary char(200);
+insert into hospital_details values(209,'Mohammed',24,'Male','HR Head','Rs.50000','Salem','2024-10-21');
+select distinct  name from hospital_details;
+select  * from hospital_details order by salary;
+update hospital_details set joindate='2024-01-01' where employee_no='208';
+update hospital_details set joindate='2024-01-01' where name='Khalid';
